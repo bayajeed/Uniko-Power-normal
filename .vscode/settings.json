@@ -1,0 +1,7 @@
+{
+    "editor.hover.sticky": true,
+    "editor.showFoldingControls": "mouseover",
+    "editor.minimap.autohide": "none",
+    "editor.minimap.showSlider": "always",
+    "scm.diffDecorations": "all"
+}
