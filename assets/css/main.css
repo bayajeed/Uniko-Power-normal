@@ -964,12 +964,14 @@ section,
   font-size: 2.75rem;
   font-weight: 700;
   margin: 30px 0;
+  color: #353434;
 }
 
 @media (min-width: 991px) {
   .about .inner-title {
-    max-width: 65%;
-    margin: 0 0 80px 0;
+    max-width: 72%;
+    margin: 0 0 10px 0;
+    
   }
 }
 
@@ -2628,9 +2630,34 @@ section,
   font-size: 14px;
 }
 
-/* for Transformer section */
 
-/* Zoom In */
+
+/*--------------------------------------------------------------
+# Transformer Section
+--------------------------------------------------------------*/
+.transformer{
+  margin-top: 10px;
+}
+  .transformer-title {
+    color: #3b3b3b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* blur/soft effect */
+    font-weight: 600;
+    position: relative;
+  }
+
+  .underline {
+    width: 189px;
+    height: 3px;
+    background: #00AEED; /* dark underline */
+    margin: 3px auto 8px auto;;
+    border-radius: 2px;
+  }
+
+  p.small {
+    font-size: 14px;
+    color: #666;
+  }
+
     .zoom-in {
       animation: zoomIn 0.4s ease forwards;
     }
@@ -2700,3 +2727,45 @@ section,
       border: none;
       box-shadow: none;
     }
+
+/*--------------------------------------------------------------
+# Lift Section
+--------------------------------------------------------------*/
+.lift{
+  margin-top: 10px;
+}
+  .lift-title {
+    color: #3b3b3b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* blur/soft effect */
+    font-weight: 600;
+    position: relative;
+  }
+
+  .underline-lift {
+    width: 75px;
+    height: 3px;
+    background: #00AEED; /* dark underline */
+    margin: 3px auto 8px auto;;
+    border-radius: 2px;
+  }
+
+  /*--------------------------------------------------------------
+# Generator Section
+--------------------------------------------------------------*/
+.generator{
+  margin-top: 10px;
+}
+  .generator-title {
+    color: #3b3b3b;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* blur/soft effect */
+    font-weight: 600;
+    position: relative;
+  }
+
+  .underline-generator {
+    width: 250px;
+    height: 3px;
+    background: #00AEED; /* dark underline */
+    margin: 3px auto 8px auto;;
+    border-radius: 2px;
+  }
