@@ -222,6 +222,32 @@ h6 {
   }
 }
 
+
+/*--------------------------------------------------------------
+# Topbar
+--------------------------------------------------------------*/
+
+/* Make the bar slim and subtle */
+.topbar {
+font-size: 0.875rem; /* small text */
+line-height: 0.5; /* compact */
+}
+.topbar .bi {
+vertical-align: -0.125em;
+}
+.topbar a {
+text-decoration: none;
+}
+.topbar a:hover {
+color: #0d6efd !important; /* Bootstrap primary color */
+}
+/* Optional: slightly reduce spacing on very small screens */
+@media (max-width: 575.98px) {
+.topbar .gap-sm-2 > * + * { margin-left: .5rem !important; }
+}
+
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -750,7 +776,7 @@ section,
 
   section,
   .section {
-    scroll-margin-top: 66px;
+    scroll-margin-top: 50px;
   }
 }
 
