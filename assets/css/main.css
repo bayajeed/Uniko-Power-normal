@@ -98,7 +98,7 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+.email-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -108,7 +108,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.email-form .sent-message {
   display: none;
   color: #ffffff;
   background: #00ADEF;
@@ -118,7 +118,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .loading {
+.email-form .loading {
   display: none;
   background: var(--surface-color);
   text-align: center;
@@ -126,7 +126,7 @@ h6 {
   margin-bottom: 24px;
 }
 
-.php-email-form .loading:before {
+.email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -135,10 +135,10 @@ h6 {
   margin: 0 10px -6px 0;
   border: 3px solid var(--accent-color);
   border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
+  animation: email-form-loading 1s linear infinite;
 }
 
-@keyframes php-email-form-loading {
+@keyframes email-form-loading {
   0% {
     transform: rotate(0deg);
   }
@@ -1002,7 +1002,7 @@ section,
 }
 
 .about .our-story {
-  padding: 40px;
+  padding: 20px;
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
 }
 
@@ -1405,6 +1405,14 @@ section,
   position: relative;
   overflow: hidden;
 }
+
+.team-member .member-img img {
+  width: 600px;       /* fixed width */
+  height: 350px;      /* fixed height */
+  object-fit: cover;  /* crop kore nicely fit korbe */
+  border-radius: 8px; /* optional - jodi corner round korte chan */
+}
+
 
 .team .team-member .social {
   position: absolute;
@@ -2424,17 +2432,17 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
-.contact .php-email-form {
+.contact .email-form {
   width: 100%;
 }
 
-.contact .php-email-form .form-group {
+.contact .email-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
+.contact .email-form input[type=text],
+.contact .email-form input[type=email],
+.contact .email-form textarea {
   color: var(--default-color);
   background-color: var(--surface-color);
   border-radius: 0px;
@@ -2443,30 +2451,30 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
+.contact .email-form input[type=text]:focus,
+.contact .email-form input[type=email]:focus,
+.contact .email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
+.contact .email-form input[type=text]::placeholder,
+.contact .email-form input[type=email]::placeholder,
+.contact .email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email] {
+.contact .email-form input[type=text],
+.contact .email-form input[type=email] {
   height: 48px;
   padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 10px 12px;
   height: 290px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .email-form button[type=submit] {
   background: var(--accent-color);
   color: var(--contrast-color);
   border: 0;
@@ -2475,7 +2483,7 @@ section,
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
 
@@ -2795,3 +2803,71 @@ section,
     margin: 3px auto 8px auto;;
     border-radius: 2px;
   }
+
+
+/*--------------------------------------------------------------
+# About Us Section
+--------------------------------------------------------------*/
+    /* Owner section */
+    /* Owner highlight */
+    .owner-hero{
+      position: relative;
+      background: radial-gradient(60% 100% at 50% 0%, rgba(13,110,253,.08) 0%, rgba(13,110,253,0) 60%),
+                  linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      overflow: hidden;
+      color: #eaeaea
+    }
+
+    .owner-hero .glow{
+      position:absolute; inset:auto -20% -30% -20%; height:60%; filter:blur(60px); opacity:.4;
+      background: conic-gradient(from 180deg at 50% 50%, rgba(13,110,253,.4), rgba(111,66,193,.3), rgba(25,135,84,.35), rgba(13,110,253,.4));
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .owner-card{
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(13,110,253,.12);
+      box-shadow: 0 10px 30px rgba(13,110,253,.08);
+      position: relative;
+      z-index: 1; /* যাতে glow এর উপরে থাকে */
+    }
+
+    .owner-img{
+      object-fit: cover; border-radius: 1.5rem; border: 6px solid #fff;
+      box-shadow: 0 10px 40px rgba(0,0,0,.15);
+      transition: all .3s ease;
+    }
+
+    /* Desktop big image */
+    @media (min-width: 992px) {
+      .owner-img { width: 300px; height: 300px; }
+    }
+
+    /* Mobile/Tablet view */
+    @media (max-width: 991px) {
+      .owner-card {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .owner-img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto 1rem auto;
+      }
+      .owner-info h1 {
+        font-size: 1.6rem;
+        margin-top: .5rem;
+      }
+      .owner-info p {
+        font-size: 1rem;
+      }
+      .owner-card .btn {
+        font-size: 0.875rem;
+        padding: 0.45rem 0.9rem;
+      }
+    }
+
+    .social a{ color: #6c757d; transition: color .2s ease; }
+    .social a:hover{ color: var(--brand); }
+    .badge-role{ background: rgba(13,110,253,.1); color:#0d6efd; }
